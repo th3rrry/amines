@@ -267,18 +267,6 @@ button#flip:disabled {
     position: relative;
 }
 
-.title-text::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
-    border-radius: 2px;
-}
-
 .user-handle {
     display: flex;
     align-items: center;
