@@ -297,23 +297,6 @@ button#flip:disabled {
     transform: scale(1.1);
 }
 
-.dollar-sign {
-    position: absolute;
-    top: -50px;
-    right: 20px;
-    font-size: 32px;
-    font-weight: 700;
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-    letter-spacing: 2px;
-    font-family: 'Halvar Breitschrift', sans-serif;
-    z-index: 1;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
 @keyframes glow {
     from {
         filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
@@ -601,6 +584,111 @@ button#flip:disabled {
 
     .container {
         margin-top: 5rem;
+    }
+}
+
+/* Адаптация для маленьких экранов (iPhone 8 и подобные) - уменьшение на 30% */
+@media (max-width: 375px) {
+    .header-content {
+        top: 28px;
+        gap: 6px;
+    }
+
+    .title-text {
+        font-size: 25px;
+        letter-spacing: 0.7px;
+    }
+
+    .user-handle {
+        font-size: 11px;
+        gap: 7px;
+    }
+
+    .telegram-icon {
+        width: 13px;
+        height: 13px;
+    }
+
+    .container {
+        margin-top: 1.7rem;
+    }
+
+    #status {
+        width: 294px;
+        height: 42px;
+        font-size: 28px;
+    }
+
+    #signal-accuracy {
+        font-size: 10px;
+        margin-top: -0.3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    #game-field {
+        width: 196px;
+        height: 196px;
+        padding: 7.35px 8.4px;
+        gap: 4.55px;
+    }
+
+    .cell {
+        width: 32.5px;
+        height: 32.5px;
+    }
+
+    .arrow-container {
+        margin-top: 0.7rem;
+    }
+
+    .arrow-button img {
+        width: 1.6rem;
+        height: 1.6rem;
+    }
+
+    #left-arrow, #right-arrow {
+        margin: 0 0.26rem;
+    }
+
+    button#flip {
+        padding: 0.9rem;
+        font-size: 11px;
+        height: 29px;
+        border-radius: 21px;
+    }
+
+    #progress-bar-container {
+        height: 6px;
+        margin-top: 0.7rem;
+        border-radius: 7px;
+    }
+
+    #countdown {
+        font-size: 10px;
+        margin-top: 7px;
+    }
+
+    .language-selector {
+        top: 74px;
+        right: 7px;
+    }
+
+    #language-icon {
+        width: 1.68rem;
+        height: 1.16rem;
+        padding: 0.21rem;
+    }
+
+    #language-dropdown {
+        grid-template-columns: repeat(2, calc(1.68rem + 0.42rem));
+        grid-template-rows: calc(1.16rem + 0.42rem);
+        top: calc(1.16rem + 0.42rem);
+    }
+
+    #language-dropdown img {
+        width: 1.68rem;
+        height: 1.16rem;
+        padding: 0.21rem;
     }
 }
 
